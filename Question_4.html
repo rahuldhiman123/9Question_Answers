@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name="contact">
+    <label>Name: <input type="text" name="username" placeholder="firstname"></label> 
+    <input type="checkbox" name="checkbox1">   
+    <button>Submit</button>
+</form>
+
+<script>
+document.contact.onsubmit=function(){
+    if(this.username.value==""){
+        alert("Enter firstname");
+        this.username.focus();
+        return false;
+    }
+    else if (!document.contact.checkbox1.checked){
+    	alert("checkbox");
+    }
+    else{
+        alert("Thanks " + this.username.value);
+    }
+}
+</script>
+</body>
+</html>
